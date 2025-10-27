@@ -2,8 +2,6 @@ body{
   background-color: #000000;
 }
 
-
-
 .nav-ul {
       list-style: none;
       display: flex;     
@@ -80,12 +78,6 @@ body{
                    0 0 40px #0300b7;
   margin-left:50px ;
   padding-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-  #home{
-    margin-top: 10px;
-  }
 }
 
 
@@ -178,19 +170,7 @@ margin-top: 180px;
     border-radius: 12px;
 }
 
-@media (max-width: 768px) {
- .aboutme-content{
-  padding: 25px;
-  font-size:1.1rem;
- }
- .know-me{
-  margin-left: 200px;
- }
- .aboutme-image{
-  margin-left: 130px;
-}
 
-}
 /* -----About Section Ends-----*/
 
 
@@ -261,11 +241,11 @@ margin-top: 180px;
 }
 #project .carousal-main {
   max-width: 800px;  
-  margin: 0 auto;       /* centers it horizontally */
+  margin: 0 auto;  /* centers it horizontally */
 }
 
 .project-content {
-  padding-right: 60px;   /* right space of the content*/
+  padding-right: 60px;  /* right space of the content*/
 }
 
 .project-content h2{
@@ -339,15 +319,6 @@ margin-top: 180px;
 }
 
 
-@media (max-width: 768px) {
-  .project-content{
-    padding: 15px;
-  }
-  .project-2-content p{
-    padding: 10px;
-  }
-}
-
 /*--------- Project - 1Ends ---------------*/
 
 /* Project - 2 Starts */
@@ -410,21 +381,6 @@ margin-top: 180px;
 }
 
 
-@media (max-width: 768px) {
-  #project-2 .pr2-img {
-    margin: auto 15px;
-  }
-  .pr2-img img{
-    width: 604px;
-  }
-  .project-2-content{
-    padding: 15px;
-    /* size: 1rem; */
-  }
-  .project-2-content p{
-    padding: 10px;
-  }
-}
 
 /* -----Project - 2 Ends----- */
 
@@ -501,7 +457,191 @@ footer{
 }
 
 
+/* =========================== */
+/* RESPONSIVE MEDIA QUERIES */
+/* =========================== */
 
 
+/* Tablets (<=768px) */
+
+@media (max-width: 768px) {
+  .nav-ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .introduction h1 {
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .introduction h4 {
+    font-size: 1.4rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .aboutme-image img {
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+   .aboutme-content {
+    font-size: 1rem;
+    padding: 10px;
+  }
 
 
+  .know-me {
+    margin-left: 0;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  #project h1 {
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .project-content,
+  .project-2-content {
+    padding: 20px;
+  }
+
+   #project-2 .pr2-img {
+    margin: auto 15px;
+  }
+  .pr2-img img{
+    width: 604px;
+  }
+
+
+  .vertical-bar {
+    position: fixed;
+    top: 370px;
+    bottom: 0;
+    left: 6px;
+    width: 50px;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 26px;
+    z-index: 1000;
+    padding: 10px 0;
+    gap: 11px;
+      box-shadow: 0 0 10px #123458, 0 0 20px #123458;
+
+  }
+
+  .vertical-bar::before{
+    display: none;
+  }
+
+
+  #contact {
+    margin-top: 200px;
+    padding: 30px;
+  }
+}
+
+/* -------------------------- */
+
+/* Smartphones (<=576px) */
+@media (max-width: 576px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .nav-ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .introduction {
+    padding: 20px;
+  }
+
+  .introduction h1 {
+    font-size: 1.6rem;
+    padding: 10px;
+  }
+
+  .introduction h4 {
+    font-size: 1.1rem;
+  }
+
+  .aboutme-content {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .aboutme-image img {
+    width: 90%;
+    margin: 0px auto;
+    display: block;
+  }
+
+  #skills-section h2 {
+    font-size: 1.8rem;
+  }
+
+  #skills-section p {
+    font-size: 0.95rem;
+  }
+
+  #project h1 {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    padding: 20px 10px;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+  }
+
+  .button a {
+    padding: 15px 40px;
+    font-size: 0.9rem;
+  }
+
+  .vertical-bar {
+    position: fixed;
+    top: 60%; 
+    left: 10px;
+    width: 40px;
+    height: 25%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    z-index: 1000;
+    padding: 8px 0;
+    gap: 8px;
+    box-shadow: 0 0 8px #123458, 0 0 16px #123458;
+  }
+
+  .vertical-bar::before {
+    display: none;
+  }
+
+  .vertical-bar a {
+    transform: scale(0.9); /* slightly smaller icons */
+  }
+}
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
